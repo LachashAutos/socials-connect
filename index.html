@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lachash Autos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="margin:0; font-family:sans-serif; text-align:center; background:#f5f5f5;">
+
+<div style="max-width:400px; margin:auto; padding:20px;">
+
+  <!-- PROFILE IMAGE -->
+  <img src="https://via.placeholder.com/120"
+       alt="Lachash Autos"
+       style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-top:40px;">
+
+  <!-- NAME -->
+  <h2 style="margin:15px 0 5px;">Lachash Autos</h2>
+  <p style="color:#666; margin-bottom:25px;">Auto Services & Deals</p>
+
+  <!-- WHATSAPP BUTTON -->
+  <a id="openBtn" href="#"
+     style="display:block; padding:14px; background:#25D366; color:#fff; border-radius:8px; text-decoration:none; margin-bottom:15px;">
+     Chat on WhatsApp
+  </a>
+
+  <!-- SOCIAL LINKS -->
+  <a href="https://www.instagram.com/dd.lachash?igsh=MWJtbm45amFzd3hxNw==" 
+     style="display:block; padding:12px; background:#fff; margin-bottom:10px; border-radius:8px; text-decoration:none; color:#000;">
+     Instagram
+  </a>
+
+  <a href="https://www.facebook.com/dd.lachash001" 
+     style="display:block; padding:12px; background:#fff; margin-bottom:10px; border-radius:8px; text-decoration:none; color:#000;">
+     Facebook
+  </a>
+
+  <a href="https://www.tiktok.com/@dd.lachash?_r=1&_t=ZS-9640X3kzrp2" 
+     style="display:block; padding:12px; background:#fff; margin-bottom:10px; border-radius:8px; text-decoration:none; color:#000;">
+     TikTok
+  </a>
+
+</div>
+
+<script>
+var phone = "2347010725505";
+
+// EXACT MESSAGE FORMAT
+var message = "Hi LACHASH AUTOS\n<smartcard scan>\nSave as:\n……………..";
+
+// Encode
+var encodedMsg = encodeURIComponent(message);
+
+// WhatsApp app link
+var appLink = "whatsapp://send?phone=" + phone + "&text=" + encodedMsg;
+
+// Assign to button
+document.getElementById("openBtn").href = appLink;
+
+// Tracking
+var img = new Image();
+img.src = "https://api.countapi.xyz/hit/lachashautos/profile";
+</script>
+
+</body>
+</html>
