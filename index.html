@@ -4,7 +4,7 @@
   <title>Lachash Autos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PREMIUM FONT -->
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <!-- ICONS -->
@@ -15,8 +15,12 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #f5f5f5, #eaeaea);
       color: #111;
+
+      background:
+        radial-gradient(circle at top left, rgba(255,215,0,0.08), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(0,0,0,0.05), transparent 50%),
+        linear-gradient(135deg, #f8f8f8, #eaeaea);
     }
 
     .container {
@@ -25,15 +29,16 @@
       padding: 20px;
     }
 
-    /* FLOATING PROFILE */
     .profile-wrap {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       margin: 50px auto 15px;
       border-radius: 50%;
-      padding: 4px;
-      background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
-      animation: float 4s ease-in-out infinite, glow 3s infinite;
+      padding: 3px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.08),
+        inset 0 0 6px rgba(255,215,0,0.15);
     }
 
     .profile-wrap img {
@@ -43,36 +48,24 @@
       object-fit: cover;
     }
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 10px gold; }
-      50% { box-shadow: 0 0 25px orange; }
-      100% { box-shadow: 0 0 10px gold; }
-    }
-
     h2 {
       margin: 10px 0 5px;
       font-weight: 700;
       letter-spacing: 1px;
     }
 
-    p.tagline {
+    .tagline {
       color: #444;
       font-size: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .verified {
       font-size: 12px;
-      color: #777;
+      color: #888;
       margin-bottom: 25px;
     }
 
-    /* PREMIUM CARDS */
     .card {
       display: flex;
       align-items: center;
@@ -83,15 +76,15 @@
       text-decoration: none;
       margin-bottom: 14px;
       font-size: 15px;
-      transition: 0.25s ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      backdrop-filter: blur(6px);
     }
 
     .card i {
       font-size: 18px;
     }
 
-    /* WhatsApp */
     .whatsapp {
       background: #25D366;
       color: #fff;
@@ -100,10 +93,9 @@
 
     .whatsapp:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+      box-shadow: 0 10px 25px rgba(37,211,102,0.3);
     }
 
-    /* Call */
     .call {
       background: #111;
       color: #fff;
@@ -111,18 +103,17 @@
 
     .call:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
-    /* Social */
     .social {
-      background: #fff;
+      background: rgba(255,255,255,0.9);
       color: #000;
     }
 
     .social:hover {
       transform: translateY(-2px);
-      background: #f0f0f0;
+      background: #ffffff;
     }
 
   </style>
@@ -132,28 +123,24 @@
 
 <div class="container">
 
-  <!-- PROFILE -->
   <div class="profile-wrap">
-    <img src="https://raw.githubusercontent.com/LachashAutos/socials-connect/main/lachash.jpg" alt="Lachash Autos">
+    <img src="https://raw.githubusercontent.com/LachashAutos/socials-connect/main/lachash.jpg">
   </div>
 
   <h2>Lachash Autos</h2>
   <p class="tagline">Now you've got motion</p>
   <p class="verified"><i class="fa-solid fa-circle-check"></i> Verified Auto Dealer</p>
 
-  <!-- WHATSAPP -->
   <a id="openBtn" href="#" class="card whatsapp">
     <i class="fa-brands fa-whatsapp"></i>
     Chat on WhatsApp
   </a>
 
-  <!-- CALL -->
   <a href="tel:2347010725505" class="card call">
     <i class="fa-solid fa-phone"></i>
-    Call Now
+    Call 07010725505
   </a>
 
-  <!-- SOCIALS -->
   <a href="https://www.instagram.com/dd.lachash?igsh=MWJtbm45amFzd3hxNw==" class="card social">
     <i class="fa-brands fa-instagram"></i>
     Instagram
@@ -174,7 +161,8 @@
 <script>
 var phone = "2347010725505";
 
-var message = "Hi LACHASH AUTOS,\nI just tapped your smart card.\nI'd like to make an enquiry.";
+/* YOUR ORIGINAL MESSAGE (UNCHANGED) */
+var message = "Hi LACHASH AUTOS\n <smartcard scan>\nSave as:\n……………..";
 
 var encodedMsg = encodeURIComponent(message);
 
@@ -182,7 +170,6 @@ var link = "https://wa.me/" + phone + "?text=" + encodedMsg;
 
 document.getElementById("openBtn").href = link;
 
-// tracking
 var img = new Image();
 img.src = "https://api.countapi.xyz/hit/lachashautos/connect";
 </script>
