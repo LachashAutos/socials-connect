@@ -9,8 +9,8 @@
       margin: 0;
       font-family: Arial, sans-serif;
       text-align: center;
-      background: #0d0d0d;
-      color: #fff;
+      background: #f5f5f5;
+      color: #111;
     }
 
     .container {
@@ -19,7 +19,7 @@
       padding: 20px;
     }
 
-    /* GOLD GLOW BORDER */
+    /* PROFILE WITH GOLD GLOW */
     .profile-wrap {
       width: 140px;
       height: 140px;
@@ -27,7 +27,8 @@
       border-radius: 50%;
       padding: 4px;
       background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
-      animation: rotateGlow 4s linear infinite;
+      animation: glowPulse 3s infinite;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
     }
 
     .profile-wrap img {
@@ -38,10 +39,10 @@
       display: block;
     }
 
-    @keyframes rotateGlow {
-      0% { filter: drop-shadow(0 0 5px gold); }
-      50% { filter: drop-shadow(0 0 20px orange); }
-      100% { filter: drop-shadow(0 0 5px gold); }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px gold; }
+      50% { box-shadow: 0 0 25px orange; }
+      100% { box-shadow: 0 0 10px gold; }
     }
 
     h2 {
@@ -50,7 +51,7 @@
     }
 
     p {
-      color: #bbb;
+      color: #555;
       margin-bottom: 25px;
     }
 
@@ -73,18 +74,18 @@
 
     .whatsapp:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #25D366;
+      box-shadow: 0 0 12px #25D366;
     }
 
     /* Social Buttons */
     .social {
-      background: #1a1a1a;
-      color: #fff;
-      border: 1px solid #333;
+      background: #fff;
+      color: #000;
+      border: 1px solid #ddd;
     }
 
     .social:hover {
-      background: #2a2a2a;
+      background: #f0f0f0;
       transform: scale(1.03);
     }
   </style>
@@ -94,7 +95,7 @@
 
 <div class="container">
 
-  <!-- PROFILE IMAGE (YOUR REAL IMAGE LINK FIXED) -->
+  <!-- PROFILE IMAGE -->
   <div class="profile-wrap">
     <img src="https://raw.githubusercontent.com/LachashAutos/socials-connect/main/lachash.jpg" alt="Lachash Autos">
   </div>
@@ -129,12 +130,11 @@ var message = "Hi LACHASH AUTOS\n<smartcard scan>\nSave as:\n……………..";
 
 var encodedMsg = encodeURIComponent(message);
 
-// WhatsApp universal link (best option)
 var link = "https://wa.me/" + phone + "?text=" + encodedMsg;
 
 document.getElementById("openBtn").href = link;
 
-// Simple visit tracking
+// tracking
 var img = new Image();
 img.src = "https://api.countapi.xyz/hit/lachashautos/connect";
 </script>
