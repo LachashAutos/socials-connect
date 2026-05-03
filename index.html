@@ -17,6 +17,7 @@
       text-align: center;
       color: #111;
 
+      /* LUXURY BACKGROUND */
       background:
         radial-gradient(circle at top left, rgba(255,215,0,0.08), transparent 40%),
         radial-gradient(circle at bottom right, rgba(0,0,0,0.05), transparent 50%),
@@ -29,16 +30,17 @@
       padding: 20px;
     }
 
+    /* SOFT GOLD PROFILE (FIXED) */
     .profile-wrap {
-      width: 130px;
-      height: 130px;
+      width: 135px;
+      height: 135px;
       margin: 50px auto 15px;
       border-radius: 50%;
       padding: 3px;
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      background: linear-gradient(135deg, #f6d365, #fda085);
       box-shadow:
-        0 4px 15px rgba(0,0,0,0.08),
-        inset 0 0 6px rgba(255,215,0,0.15);
+        0 6px 18px rgba(0,0,0,0.08),
+        0 0 12px rgba(255,215,0,0.25); /* soft glow, not loud */
     }
 
     .profile-wrap img {
@@ -46,6 +48,7 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
+      display: block;
     }
 
     h2 {
@@ -66,6 +69,7 @@
       margin-bottom: 25px;
     }
 
+    /* CARDS */
     .card {
       display: flex;
       align-items: center;
@@ -78,7 +82,6 @@
       font-size: 15px;
       transition: all 0.25s ease;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      backdrop-filter: blur(6px);
     }
 
     .card i {
@@ -123,6 +126,7 @@
 
 <div class="container">
 
+  <!-- PROFILE -->
   <div class="profile-wrap">
     <img src="https://raw.githubusercontent.com/LachashAutos/socials-connect/main/lachash.jpg">
   </div>
@@ -131,16 +135,19 @@
   <p class="tagline">Now you've got motion</p>
   <p class="verified"><i class="fa-solid fa-circle-check"></i> Verified Auto Dealer</p>
 
+  <!-- WHATSAPP -->
   <a id="openBtn" href="#" class="card whatsapp">
     <i class="fa-brands fa-whatsapp"></i>
     Chat on WhatsApp
   </a>
 
-  <a href="tel:2347010725505" class="card call">
+  <!-- CALL (FIXED) -->
+  <a href="tel:07010725505" class="card call">
     <i class="fa-solid fa-phone"></i>
-    Call 07010725505
+    Call Now
   </a>
 
+  <!-- SOCIALS -->
   <a href="https://www.instagram.com/dd.lachash?igsh=MWJtbm45amFzd3hxNw==" class="card social">
     <i class="fa-brands fa-instagram"></i>
     Instagram
@@ -161,7 +168,6 @@
 <script>
 var phone = "2347010725505";
 
-/* YOUR ORIGINAL MESSAGE (UNCHANGED) */
 var message = "Hi LACHASH AUTOS\n <smartcard scan>\nSave as:\n……………..";
 
 var encodedMsg = encodeURIComponent(message);
